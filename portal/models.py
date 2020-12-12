@@ -5,10 +5,10 @@ from django.contrib.auth.models import PermissionsMixin
 from django.utils import timezone
 
 class UserProfile(models.Model):
-	username = models.OneToOneField(User, on_delete=models.DO_NOTHING)
+	users = models.OneToOneField(User, on_delete=models.DO_NOTHING)
 
 	def __str__(self):
-		return self.user
+		return self.users
 
 class Trainers(models.Model):
 	name = models.CharField(max_length=40)
